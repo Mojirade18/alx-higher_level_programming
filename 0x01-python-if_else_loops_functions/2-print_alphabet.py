@@ -1,7 +1,6 @@
 #!/usr/bin/python3
+"""Print the alphabet in lowercase, not followed by a new line"""
 
-for char in range(ord('a'), ord('z') + 1):
-    print("{:c}".format(char), end='')
-
-print()  # Add a newline at the end to match the desired output
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")
 
