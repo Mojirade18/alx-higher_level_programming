@@ -8,5 +8,5 @@ for first_digit in range(10):
             else:
                 print("{:d}{:d}".format(first_digit, second_digit))
 
-print()  # Add a newline at the end to match the desired output
+print()  # Add a newline at the end to match the expected output
 
