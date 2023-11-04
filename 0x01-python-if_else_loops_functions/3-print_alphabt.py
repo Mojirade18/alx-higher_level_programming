@@ -2,7 +2,7 @@
 
 for letter in range(97, 123):
     if chr(letter) not in 'qe':
-        print("{}".format(chr(letter), end=''), end='')
+        print(chr(letter), end='')  # This single print statement without .format()
 
 print()  # Add a newline at the end to match the desired output
 
