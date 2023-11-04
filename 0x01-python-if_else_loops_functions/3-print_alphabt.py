@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
+output = ""
 for letter in range(97, 123):
-    if chr(letter) != 'q' and chr(letter) != 'e':
-        print("{}". format(chr(letter)), end="")  # This single print statement without .format()
+    if chr(letter) not in 'qe':
+        output += chr(letter)
 
-print()  # Add a newline at the end to match the desired output
+print(output, end="\n")
 
