@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-for ascii_value in range(ord('a'), ord('z') + 1):
-    print(chr(ascii_value), end='')
+for char in range(ord('a'), ord('z') + 1):
+    print("{:c}".format(char), end='')
 
-print()
+print()  # Add a newline at the end to match the desired output
+
