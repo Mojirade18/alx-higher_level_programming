@@ -1,30 +1,24 @@
 #!/usr/bin/python3
-import sys
-from calculator_1 import add, sub, mul, div
-
 if __name__ == "__main":
-    operators = {
-        '+': add,
-        '-': sub,
-        '*': mul,
-        '/': div
-    }
-
+    import sys
+    from calculator_1 import add, sub, mul, div
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
-
+        exit(1)
     a = int(sys.argv[1])
-    operator = sys.argv[2]
     b = int(sys.argv[3])
-
-    if operator not in operators:
+    op = sys.argv[2]
+    if op == "+":
+        print("{} + {} = {}".format(a, b, add(a, b)))
+    elif op == "-":
+        print("{} - {} = {}".format(a, b, sub(a, b)))
+    elif op == "*":
+        print("{} * {} = {}".format(a, b, mul(a, b)))
+    elif op == "/":
+        if b == 0:
+            print("Error: Division by 0")
+            exit(1)
+        print("{} / {} = {}".format(a, b, div(a, b)))
+    else:
         print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit(1)
-
-    if operator == '/' and b == 0:
-        print("Error: Division by 0")
-        sys.exit(1)
-
-    result = operators[operator](a, b)
-    print(f"{a} {operator} {b} = {result}")
+        exit(1)
