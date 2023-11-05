@@ -15,9 +15,6 @@ if __name__ == "__main":
     elif op == "*":
         print("{} * {} = {}".format(a, b, mul(a, b)))
     elif op == "/":
-        if b == 0:
-            print("Error: Division by 0")
-            exit(1)
         print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
