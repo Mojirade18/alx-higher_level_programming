@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 if __name__ == "__main":
     import sys
     from calculator_1 import add, sub, mul, div
@@ -15,7 +16,10 @@ if __name__ == "__main":
     elif op == "*":
         print("{} * {} = {}".format(a, b, mul(a, b)))
     elif op == "/":
+        if b == 0:
+            print("Error: Division by 0")
+            exit(1)
         print("{} / {} = {}".format(a, b, div(a, b)))
     else:
-        print("Unknown operator. Available operators: +, -, * and /")
+        print("Unknown operator. Available operators: +, -, *, and /")
         exit(1)
